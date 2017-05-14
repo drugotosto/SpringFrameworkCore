@@ -6,13 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="annotation-based-autowiring" />
         <module name="annotation-based-configuration" />
         <module name="constructor-injection" />
         <module name="java-based-autowiring" />
         <module name="java-based-configuration" />
         <module name="provaDowncastUpcast" />
+        <module name="setter-injection" />
         <module name="UpcastDowncastSpike" />
         <module name="upcastDowncastSpike" />
+        <module name="xml-based-autowiring" />
         <module name="xml-based-configuration" />
       </profile>
     </annotationProcessing>

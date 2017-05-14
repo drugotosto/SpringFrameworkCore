@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/spring-book-ch2/annotation-based-autowiring/annotation-based-autowiring.iml" filepath="$PROJECT_DIR$/spring-book-ch2/annotation-based-autowiring/annotation-based-autowiring.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-book-ch2/annotation-based-configuration/annotation-based-configuration.iml" filepath="$PROJECT_DIR$/spring-book-ch2/annotation-based-configuration/annotation-based-configuration.iml" group="DI" />
       <module fileurl="file://$PROJECT_DIR$/spring-book-ch2/constructor-injection/constructor-injection.iml" filepath="$PROJECT_DIR$/spring-book-ch2/constructor-injection/constructor-injection.iml" group="DI" />
       <module fileurl="file://$PROJECT_DIR$/spring-book-ch2/java-based-autowiring/java-based-autowiring.iml" filepath="$PROJECT_DIR$/spring-book-ch2/java-based-autowiring/java-based-autowiring.iml" group="DI" />
       <module fileurl="file://$PROJECT_DIR$/spring-book-ch2/java-based-configuration/java-based-configuration.iml" filepath="$PROJECT_DIR$/spring-book-ch2/java-based-configuration/java-based-configuration.iml" group="DI" />
+      <module fileurl="file://$PROJECT_DIR$/spring-book-ch2/setter-injection/setter-injection.iml" filepath="$PROJECT_DIR$/spring-book-ch2/setter-injection/setter-injection.iml" group="DI" />
       <module fileurl="file://$PROJECT_DIR$/upcastDowncastSpike/upcastDowncastSpike.iml" filepath="$PROJECT_DIR$/upcastDowncastSpike/upcastDowncastSpike.iml" group="Vario" />
+      <module fileurl="file://$PROJECT_DIR$/spring-book-ch2/xml-based-autowiring/xml-based-autowiring.iml" filepath="$PROJECT_DIR$/spring-book-ch2/xml-based-autowiring/xml-based-autowiring.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-book-ch2/xml-based-configuration/xml-based-configuration.iml" filepath="$PROJECT_DIR$/spring-book-ch2/xml-based-configuration/xml-based-configuration.iml" group="DI" />
     </modules>
   </component>
