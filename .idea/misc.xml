@@ -13,12 +13,12 @@
         <option value="$PROJECT_DIR$/UpcastDowncastSpike/pom.xml" />
         <option value="$PROJECT_DIR$/spring-book-ch2/java-based-configuration/pom.xml" />
         <option value="$PROJECT_DIR$/spring-book-ch2/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-book-ch2/annotation-based-configuration/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/spring-book-ch2/annotation-based-autowiring/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-book-ch2/annotation-based-configuration/pom.xml" />
         <option value="$PROJECT_DIR$/spring-book-ch2/bean-definition-override/pom.xml" />
         <option value="$PROJECT_DIR$/spring-book-ch2/bean-definition-profiles/pom.xml" />
         <option value="$PROJECT_DIR$/spring-book-ch2/bean-instantiation-methods/pom.xml" />

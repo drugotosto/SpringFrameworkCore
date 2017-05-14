@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
     Within the configuration class, you created two factory methods marked with the
     "org.springframework.context.annotation.Bean" annotation. Those methods are called
     by the Spring Container during bootstrap, and their returning values are treated
-    as Spring‐managed beans.
+    as Spring‐managed beans. The method name is accepted as the bean name by default.
     Within a factory method, you created a bean using its concrete class and returned it
     after setting its necessary dependencies by calling its setter methods. Dependencies
     can also be given as constructor arguments.

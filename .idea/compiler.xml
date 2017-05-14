@@ -6,9 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="annotation-based-configuration" />
         <module name="java-based-configuration" />
         <module name="provaDowncastUpcast" />
         <module name="UpcastDowncastSpike" />
+        <module name="upcastDowncastSpike" />
         <module name="xml-based-configuration" />
       </profile>
     </annotationProcessing>
@@ -31,6 +33,7 @@
       <module name="setter-injection" target="1.8" />
       <module name="spring-book-ch2" target="1.8" />
       <module name="UpcastDowncastSpike" target="1.5" />
+      <module name="upcastDowncastSpike" target="1.5" />
       <module name="xml-based-autowiring" target="1.8" />
       <module name="xml-based-configuration" target="1.8" />
     </bytecodeTargetLevel>
