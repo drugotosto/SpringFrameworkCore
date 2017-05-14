@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/spring-book-ch2/bean-definition-profiles" />
+    <file type="web" url="file://$PROJECT_DIR$/spring-book-ch2/bean-scopes" />
+    <file type="web" url="file://$PROJECT_DIR$/spring-book-ch2/lifecycle-callback-methods" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$USER_HOME$/Downloads/spring-book-ch02/spring-book-ch2/java-based-configuration/pom.xml" />
+        <option value="$PROJECT_DIR$/java-based-configuration/pom.xml" />
+        <option value="$PROJECT_DIR$/UpcastDowncastSpike/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-book-ch2/java-based-configuration/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-book-ch2/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/spring-book-ch2/annotation-based-autowiring/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-book-ch2/annotation-based-configuration/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-book-ch2/bean-definition-override/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-book-ch2/bean-definition-profiles/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-book-ch2/bean-instantiation-methods/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-book-ch2/bean-scopes/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-book-ch2/configuring-environment/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-book-ch2/constructor-injection/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-book-ch2/java-based-autowiring/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-book-ch2/lifecycle-callback-methods/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-book-ch2/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-book-ch2/setter-injection/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-book-ch2/xml-based-autowiring/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Android</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_3" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="java-based-configuration" />
+        <module name="provaDowncastUpcast" />
+        <module name="UpcastDowncastSpike" />
+        <module name="xml-based-configuration" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="annotation-based-autowiring" target="1.8" />
+      <module name="annotation-based-configuration" target="1.8" />
+      <module name="bean-definition-override" target="1.8" />
+      <module name="bean-definition-profiles" target="1.8" />
+      <module name="bean-instantiation-methods" target="1.8" />
+      <module name="bean-scopes" target="1.8" />
+      <module name="ch1-exercise3-constructor-injection" target="1.8" />
+      <module name="ch1-exercise3-setter-injection" target="1.8" />
+      <module name="configuring-environment" target="1.8" />
+      <module name="constructor-injection" target="1.8" />
+      <module name="java-based-autowiring" target="1.8" />
+      <module name="java-based-configuration" target="1.8" />
+      <module name="javabasedconfiguration" target="1.5" />
+      <module name="lifecycle-callback-methods" target="1.8" />
+      <module name="provaDowncastUpcast" target="1.8" />
+      <module name="setter-injection" target="1.8" />
+      <module name="spring-book-ch2" target="1.8" />
+      <module name="UpcastDowncastSpike" target="1.5" />
+      <module name="xml-based-autowiring" target="1.8" />
+      <module name="xml-based-configuration" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
