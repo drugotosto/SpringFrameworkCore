@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="annotation-based-configuration" />
         <module name="constructor-injection" />
+        <module name="java-based-autowiring" />
         <module name="java-based-configuration" />
         <module name="provaDowncastUpcast" />
         <module name="UpcastDowncastSpike" />

@@ -3,8 +3,8 @@ ovvero utilizzo dell "Automatically wiring beans" utilizzando le funzioni di:
     - Component Scanning: Spring automatically discovers beans to be created in the application context.
     - Autowiring: Spring automatically satisfies bean dependencies.
 
-- You used the "@Service" and "@Repository" annotations to define your Spring‐managed beans. They both
-extend from the "org.springframework.stereotype.Component annotation".
+- The "@Service" and "@Repository" annotations to define your Spring‐managed beans. They both
+  extend from the "org.springframework.stereotype.Component" annotation.
 - The "@Service" annotation has no special meaning apart from defining a bean from the class it used on top.
 - The "@Repository", on the other hand, enables additional functionality related to Spring data access,
 - Therefore, your beans have the names "accountServiceImpl" and "accountDaoInMemoryImpl"

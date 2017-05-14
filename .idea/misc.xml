@@ -15,6 +15,7 @@
         <option value="$PROJECT_DIR$/spring-book-ch2/pom.xml" />
         <option value="$PROJECT_DIR$/spring-book-ch2/annotation-based-configuration/pom.xml" />
         <option value="$PROJECT_DIR$/spring-book-ch2/constructor-injection/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-book-ch2/java-based-autowiring/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
@@ -25,7 +26,6 @@
         <option value="$PROJECT_DIR$/spring-book-ch2/bean-instantiation-methods/pom.xml" />
         <option value="$PROJECT_DIR$/spring-book-ch2/bean-scopes/pom.xml" />
         <option value="$PROJECT_DIR$/spring-book-ch2/configuring-environment/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-book-ch2/java-based-autowiring/pom.xml" />
         <option value="$PROJECT_DIR$/spring-book-ch2/lifecycle-callback-methods/pom.xml" />
         <option value="$PROJECT_DIR$/spring-book-ch2/pom.xml" />
         <option value="$PROJECT_DIR$/spring-book-ch2/setter-injection/pom.xml" />
