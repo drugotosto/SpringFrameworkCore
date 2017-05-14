@@ -3,12 +3,11 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <!--References to other beans are specified with the ref attribute of the <property> element-->
 	<bean id="accountService" class="com.wiley.beginningspring.ch2.AccountServiceImpl">
 		<property name="accountDao" ref="accountDao"/>
 	</bean>
 	
-	<bean id="accountDao" class="com.wiley.beginningspring.ch2.AccountDaoInMemoryImpl">
-	
-	</bean>
+	<bean id="accountDao" class="com.wiley.beginningspring.ch2.AccountDaoInMemoryImpl"> </bean>
 
 </beans>

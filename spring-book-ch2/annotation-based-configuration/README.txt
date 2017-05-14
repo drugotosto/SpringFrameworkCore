@@ -20,4 +20,4 @@ extend from the "org.springframework.stereotype.Component annotation".
   and narrow the classpath so that the bootstrap doesn't take too much time.
   Therefore, you put the <context:component‐scan/> element into the bean configuration file
 
-(utilizzo del XML java ch2-beans.xml)
+- Utilizzo del XML java ch2-beans.xml to to enable this component scan process

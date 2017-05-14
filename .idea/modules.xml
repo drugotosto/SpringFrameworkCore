@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/spring-book-ch2/annotation-based-configuration/annotation-based-configuration.iml" filepath="$PROJECT_DIR$/spring-book-ch2/annotation-based-configuration/annotation-based-configuration.iml" group="DI" />
+      <module fileurl="file://$PROJECT_DIR$/spring-book-ch2/constructor-injection/constructor-injection.iml" filepath="$PROJECT_DIR$/spring-book-ch2/constructor-injection/constructor-injection.iml" group="DI" />
       <module fileurl="file://$PROJECT_DIR$/spring-book-ch2/java-based-configuration/java-based-configuration.iml" filepath="$PROJECT_DIR$/spring-book-ch2/java-based-configuration/java-based-configuration.iml" group="DI" />
       <module fileurl="file://$PROJECT_DIR$/upcastDowncastSpike/upcastDowncastSpike.iml" filepath="$PROJECT_DIR$/upcastDowncastSpike/upcastDowncastSpike.iml" group="Vario" />
       <module fileurl="file://$PROJECT_DIR$/spring-book-ch2/xml-based-configuration/xml-based-configuration.iml" filepath="$PROJECT_DIR$/spring-book-ch2/xml-based-configuration/xml-based-configuration.iml" group="DI" />
