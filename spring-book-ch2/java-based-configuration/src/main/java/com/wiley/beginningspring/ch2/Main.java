@@ -3,7 +3,10 @@ package com.wiley.beginningspring.ch2;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {
-
+    /*
+        The "org.springframework.context.ApplicationContext" interface represents the Spring Container;
+        in fact, the terms the Spring Container and ApplicationContext are often used interchangeably.
+    */
 	public static void main(String[] args) {
 		AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(Ch2BeanConfiguration.class);
 		AccountService accountService = applicationContext.getBean("accountService", AccountService.class);
