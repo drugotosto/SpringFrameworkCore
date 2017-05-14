@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="accountService" class="com.wiley.beginningspring.ch2.AccountServiceImpl">
+		<constructor-arg ref="accountDao"/>
+	</bean>
+
+	<bean id="accountDao" class="com.wiley.beginningspring.ch2.AccountDaoInMemoryImpl">
+	</bean>
+
+
+    <!--
+        There can be several constructors in the bean definition class. The Spring Container looks at the
+        <constructor‐arg/> elements in the bean definition, identifies types of dependencies specified using
+        the <constructor‐arg/> elements, and then tries to find a suitable constructor using Java reflection.
+    -->
+    <bean id="bar" class="com.wiley.beginningspring.ch2.Bar"/>
+
+    <bean id="baz" class="com.wiley.beginningspring.ch2.Baz"/>
+
+    <!--
+        When you attempt to create a bean configuration as follows, the Spring Container
+        fails to instantiate the foo bean because it won't be able to identify which
+        constructor to invoke.
+        You need to help the Spring Container a bit, so that it can choose one constructor
+        and create the bean instance using it. You do this by giving an index attribute
+        for each <constructor‐arg> element in the bean definition
+    -->
+    <bean id="foo" class="com.wiley.beginningspring.ch2.Foo">
+		<constructor-arg ref="bar" index="0"/>
+		<constructor-arg ref="baz" index="1"/>
+	</bean>
+
+    <!--In a bean definition, you can use both setter injection and constructor injection.-->
+	<bean id="foo2" class="com.wiley.beginningspring.ch2.Foo">
+		<constructor-arg ref="bar"/>
+		<property name="baz" ref="baz"/>
+	</bean>
+
+
+</beans>
