@@ -4,8 +4,16 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {
 
+    /*
+        In this case, org.springframework.context.support.ClassPathXmlApplicationContext is used to load the
+        XML configuration metadata files, which reside in the classpath of the application.
+     */
 	public static void main(String[] args) {
 		ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("META-INF/spring/ch2-beans.xml");
+		/*
+            After creating "ApplicationContext" you performed a bean lookup by calling
+            the "ApplicationContext.getBean()" method and obtained the accountService bean
+        */
 		AccountService accountService = applicationContext.getBean("accountService", AccountService.class);
 
 		System.out.println("Before money transfer");

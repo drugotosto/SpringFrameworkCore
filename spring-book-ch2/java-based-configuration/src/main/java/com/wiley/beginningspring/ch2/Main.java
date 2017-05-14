@@ -1,5 +1,6 @@
 package com.wiley.beginningspring.ch2;
 
+import com.wiley.beginningspring.ch2.config.Ch2BeanConfiguration;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {
