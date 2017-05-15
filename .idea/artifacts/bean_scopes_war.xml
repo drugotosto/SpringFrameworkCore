@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="bean-scopes:war">
+    <output-path>$PROJECT_DIR$/spring-book-ch2/bean-scopes/target</output-path>
+    <root id="archive" name="bean-scopes.war">
+      <element id="artifact" artifact-name="bean-scopes:war exploded" />
+    </root>
+  </artifact>
+</component>

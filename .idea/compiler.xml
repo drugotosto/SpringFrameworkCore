@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="annotation-based-autowiring" />
         <module name="annotation-based-configuration" />
+        <module name="bean-scopes" />
         <module name="constructor-injection" />
         <module name="java-based-autowiring" />
         <module name="java-based-configuration" />

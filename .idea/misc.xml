@@ -23,7 +23,6 @@
         <option value="$PROJECT_DIR$/spring-book-ch2/bean-definition-override/pom.xml" />
         <option value="$PROJECT_DIR$/spring-book-ch2/bean-definition-profiles/pom.xml" />
         <option value="$PROJECT_DIR$/spring-book-ch2/bean-instantiation-methods/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-book-ch2/bean-scopes/pom.xml" />
         <option value="$PROJECT_DIR$/spring-book-ch2/configuring-environment/pom.xml" />
         <option value="$PROJECT_DIR$/spring-book-ch2/lifecycle-callback-methods/pom.xml" />
         <option value="$PROJECT_DIR$/spring-book-ch2/pom.xml" />
