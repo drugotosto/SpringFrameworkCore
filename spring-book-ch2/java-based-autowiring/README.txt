@@ -1,4 +1,9 @@
-Spike che effettua Autowiring attraverso Java‐Based Bean Configuration facendo uso delle annotazioni @Autowired e @Qualifier
+- Spike che istanzia lo Spring Container e lo va a configurare utilizzando la Java‐Based Configuration
+  attraverso utilizzo delle notazioni @Autowired e @Qualifier applicando così l' "Automatically wiring beans"
+  utilizzando le funzioni di:
+        - Component Scanning: Spring automatically discovers beans to be created in the application context.
+        - Autowiring: Spring automatically satisfies bean dependencies.
+
 
 You don't have to explicitly define dependencies in your bean definitions; you can let the Spring
 Container inject them to your beans automatically. This is called autowiring. It is useful especially
@@ -9,13 +14,13 @@ Autowiring has three modes:
         - constructor.
 
 - In particolare si nota che ci sono 2 beans candidati associati al tipo "AccountDao" ed è per questo che deve essere usato
-  il @Qualifier notification poichè il modo standard utilizzato "byType" in questo caso non funzionerebbe.
+  il @Qualifier notification poichè il metodo inziale adottato tramite "byType" in questo caso non funzionerebbe.
   The container failed during bootstrap because it identified two candidate beans with theAccountDao type,
   which can be auto‐injected into the accountDao property of the accountService bean.
   When you place the @Qualifier annotation together with the @Autowired and @Bean annotations,
   autowiring behavior turns into byName mode.
 
-- Another nice feature related to autowiring in Java‐ and annotation‐based configurations is that you
+- Another nice feature related to autowiring in Java‐and annotation‐based configurations is that you
   can also place @Autowired on fields. This removes the necessity of having setter methods for setter injection.
 
 - Autowiring is only for dependencies to other beans. It doesn't work for straight values, such as

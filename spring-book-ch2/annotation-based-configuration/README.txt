@@ -1,5 +1,5 @@
-- Spike che istanzia lo Spring Container e lo va a configurare utilizzando Java Annotation‐Based Configuration
-ovvero utilizzo dell "Automatically wiring beans" utilizzando le funzioni di:
+- Spike che istanzia lo Spring Container e lo va a configurare utilizzando Annotation‐Based Configuration
+attraverso lìuso del "Automatically wiring beans" utilizzando le funzioni di:
     - Component Scanning: Spring automatically discovers beans to be created in the application context.
     - Autowiring: Spring automatically satisfies bean dependencies.
 
