@@ -1,4 +1,4 @@
-- Questo Spike tratta lo SCOPE dei beans.
+- Questo Spike tratta lo SCOPE dei beans attraverso l'implementazione di una mini web-application
 
 - The lifetime of beans created by the Spring Container is called bean scope. By default, all beans created
 by the Spring Container have singleton scope. In other words, only one bean instance is created
