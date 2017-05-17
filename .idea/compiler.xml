@@ -8,12 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="annotation-based-autowiring" />
         <module name="annotation-based-configuration" />
+        <module name="basic" />
         <module name="bean-scopes" />
         <module name="constructor-injection" />
         <module name="java-based-autowiring" />
         <module name="java-based-configuration" />
         <module name="provaDowncastUpcast" />
         <module name="setter-injection" />
+        <module name="upcastDowncastSpike" />
         <module name="UpcastDowncastSpike" />
         <module name="xml-based-autowiring" />
         <module name="xml-based-configuration" />
@@ -22,6 +24,8 @@
     <bytecodeTargetLevel>
       <module name="annotation-based-autowiring" target="1.7" />
       <module name="annotation-based-configuration" target="1.7" />
+      <module name="basic" target="1.5" />
+      <module name="basic2" target="1.5" />
       <module name="bean-definition-override" target="1.8" />
       <module name="bean-definition-profiles" target="1.8" />
       <module name="bean-instantiation-methods" target="1.8" />

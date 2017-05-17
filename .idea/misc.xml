@@ -4,6 +4,8 @@
     <file type="web" url="file://$PROJECT_DIR$/spring-book-ch2/bean-definition-profiles" />
     <file type="web" url="file://$PROJECT_DIR$/spring-book-ch2/bean-scopes" />
     <file type="web" url="file://$PROJECT_DIR$/spring-book-ch2/lifecycle-callback-methods" />
+    <file type="web" url="file://$PROJECT_DIR$/spring-book-ch3/basic" />
+    <file type="web" url="file://$PROJECT_DIR$/spring-book-ch3/basic2" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -22,6 +24,7 @@
         <option value="$PROJECT_DIR$/spring-book-ch2/xml-based-configuration/pom.xml" />
         <option value="$PROJECT_DIR$/vario/upcastDowncastSpike/pom.xml" />
         <option value="$PROJECT_DIR$/spring-book-ch2/bean-scopes/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-book-ch3/basic/pom.xml" />
       </list>
     </option>
   </component>
