@@ -1,6 +1,7 @@
 package spittr.dao;
 
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 import spittr.model.Spitter;
 
 import javax.persistence.*;
@@ -9,6 +10,7 @@ import javax.persistence.*;
  * Created by drugo on 29/05/2017.
  */
 @Repository
+@Transactional
 public class JpaSpitterRepository implements SpitterRepository{
 
     @PersistenceContext

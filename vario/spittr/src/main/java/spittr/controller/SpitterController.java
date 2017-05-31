@@ -31,7 +31,6 @@ public class SpitterController {
         return "registerForm";
     }
 
-    @RequestMapping(value="/register", method=RequestMethod.POST)
     /*
     The new processRegistration() method: it’s given a Spitter object as a parameter.
     This object has firstName, lastName, username, and password properties that will be populated from
@@ -40,6 +39,7 @@ public class SpitterController {
     method on the SpitterRepository that is now injected into SpitterController in
     the constructor.
      */
+    @RequestMapping(value="/register", method=RequestMethod.POST)
     public String processRegistration(Spitter spitter) {
         System.out.println("\nTEST relativo al processamento del form di inserimento dati da parte dell'utente!");
         System.out.println("\nValori ricevuti:\t"+ spitter.getFirstName() + "\t"+ spitter.getLastName());

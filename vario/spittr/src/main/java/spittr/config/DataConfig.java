@@ -1,6 +1,6 @@
 package spittr.config;
 
-import org.hibernate.jpa.HibernatePersistenceProvider;
+import org.hibernate.ejb.HibernatePersistence;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -50,7 +50,7 @@ public class DataConfig {
     @Autowired
     public LocalContainerEntityManagerFactoryBean entityManagerFactory(DataSource dataSource) {
         LocalContainerEntityManagerFactoryBean factoryBean = new LocalContainerEntityManagerFactoryBean();
-        factoryBean.setPersistenceProviderClass(HibernatePersistenceProvider.class);
+        factoryBean.setPersistenceProviderClass(HibernatePersistence.class);
         factoryBean.setDataSource(dataSource);
         factoryBean.setPackagesToScan("spittr.model");
         factoryBean.setJpaPropertyMap(jpaProperties());
@@ -62,12 +62,6 @@ public class DataConfig {
         return new PersistenceExceptionTranslationPostProcessor();
     }
 
-//    @Bean
-//    @Autowired
-//    public JpaTransactionManager jpaTransMan(EntityManagerFactory entityManagerFactory){
-//        JpaTransactionManager jtManager = new JpaTransactionManager(entityManagerFactory);
-//        return jtManager;
-//    }
 
     @Bean
     @Autowired

@@ -73,6 +73,7 @@ public class WebConfig  extends WebMvcConfigurerAdapter {
     requests for static resources to the servlet container’s default servlet and not to try to
     handle them itself.
      */
+
     @Override
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
         configurer.enable();
