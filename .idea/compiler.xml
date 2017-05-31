@@ -10,13 +10,18 @@
         <module name="annotation-based-configuration" />
         <module name="basic" />
         <module name="bean-scopes" />
+        <module name="configuring-and-using-jpa-with-spring" />
         <module name="constructor-injection" />
         <module name="java-based-autowiring" />
         <module name="java-based-configuration" />
         <module name="provaDowncastUpcast" />
         <module name="setter-injection" />
+        <module name="spittr" />
         <module name="upcastDowncastSpike" />
         <module name="UpcastDowncastSpike" />
+        <module name="using-persistence-context" />
+        <module name="using-persistence-unit" />
+        <module name="usingpersistencecontext" />
         <module name="xml-based-autowiring" />
         <module name="xml-based-configuration" />
       </profile>
@@ -32,6 +37,7 @@
       <module name="bean-scopes" target="1.5" />
       <module name="ch1-exercise3-constructor-injection" target="1.8" />
       <module name="ch1-exercise3-setter-injection" target="1.8" />
+      <module name="configuring-and-using-jpa-with-spring" target="1.5" />
       <module name="configuring-environment" target="1.8" />
       <module name="constructor-injection" target="1.7" />
       <module name="java-based-autowiring" target="1.7" />
@@ -40,9 +46,13 @@
       <module name="lifecycle-callback-methods" target="1.8" />
       <module name="provaDowncastUpcast" target="1.8" />
       <module name="setter-injection" target="1.7" />
+      <module name="spittr" target="1.5" />
       <module name="spring-book-ch2" target="1.8" />
       <module name="UpcastDowncastSpike" target="1.5" />
       <module name="upcastDowncastSpike" target="1.5" />
+      <module name="using-persistence-context" target="1.6" />
+      <module name="using-persistence-unit" target="1.5" />
+      <module name="usingpersistencecontext" target="1.5" />
       <module name="xml-based-autowiring" target="1.7" />
       <module name="xml-based-configuration" target="1.7" />
     </bytecodeTargetLevel>

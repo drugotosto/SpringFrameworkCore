@@ -1,0 +1,21 @@
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+  <display-name>Archetype Created Web Application</display-name>
+
+    <!--the Dispatcher Servlet-->
+    <servlet>
+        <servlet-name>springmvc</servlet-name>
+        <servlet-class>
+            org.springframework.web.servlet.DispatcherServlet
+        </servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <!--
+    When the user requests the URL http://localhost:8080/hello.mvc, the DispatcherServlet is executed
+    because it’s mapped to the URLs suffixed with .mvc. It handles the incoming request and decides
+    which controller should handle this request with the help of handler mapping -->
+    <servlet-mapping>
+        <servlet-name>springmvc</servlet-name>
+        <url-pattern>*.mvc</url-pattern>
+    </servlet-mapping>
+</web-app>

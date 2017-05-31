@@ -8,6 +8,7 @@
     <context:component-scan base-package="com.ferrero"/>
 
     <!--Activates the annotations that are defined in the beans-->
+    <!-- C'è anche la possibilità di usare <mvc:annotation-driven /> che contiene più annotazioni specifiche -->
     <context:annotation-config/>
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">

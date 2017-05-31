@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="springdb@localhost" uuid="dc9e240e-cad5-4564-b11f-0d88531eda20">
+    <data-source source="LOCAL" name="beginningspringdb@localhost" uuid="8abdb515-9ab4-4b33-803e-c0af5347fcdd">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/springdb</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/beginningspringdb</jdbc-url>
       <driver-properties>
         <property name="autoReconnect" value="true" />
         <property name="zeroDateTimeBehavior" value="convertToNull" />

@@ -6,6 +6,7 @@
     <file type="web" url="file://$PROJECT_DIR$/spring-book-ch2/lifecycle-callback-methods" />
     <file type="web" url="file://$PROJECT_DIR$/spring-book-ch3/basic" />
     <file type="web" url="file://$PROJECT_DIR$/spring-book-ch3/basic2" />
+    <file type="web" url="file://$PROJECT_DIR$/vario/spittr" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -25,6 +26,11 @@
         <option value="$PROJECT_DIR$/vario/upcastDowncastSpike/pom.xml" />
         <option value="$PROJECT_DIR$/spring-book-ch2/bean-scopes/pom.xml" />
         <option value="$PROJECT_DIR$/spring-book-ch3/basic/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-book-ch5/usingpersistencecontext/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-book-ch5/configuring-and-using-jpa-with-spring/pom.xml" />
+        <option value="$PROJECT_DIR$/vario/spittr/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-book-ch5/using-persistence-unit/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-book-ch5/using-persistence-context/pom.xml" />
       </list>
     </option>
   </component>

@@ -6,11 +6,15 @@
       <module fileurl="file://$PROJECT_DIR$/spring-book-ch2/annotation-based-configuration/annotation-based-configuration.iml" filepath="$PROJECT_DIR$/spring-book-ch2/annotation-based-configuration/annotation-based-configuration.iml" group="DI" />
       <module fileurl="file://$PROJECT_DIR$/spring-book-ch3/basic/basic.iml" filepath="$PROJECT_DIR$/spring-book-ch3/basic/basic.iml" group="Web" />
       <module fileurl="file://$PROJECT_DIR$/spring-book-ch2/bean-scopes/bean-scopes.iml" filepath="$PROJECT_DIR$/spring-book-ch2/bean-scopes/bean-scopes.iml" group="DI" />
+      <module fileurl="file://$PROJECT_DIR$/spring-book-ch5/configuring-and-using-jpa-with-spring/configuring-and-using-jpa-with-spring.iml" filepath="$PROJECT_DIR$/spring-book-ch5/configuring-and-using-jpa-with-spring/configuring-and-using-jpa-with-spring.iml" group="JPA" />
       <module fileurl="file://$PROJECT_DIR$/spring-book-ch2/constructor-injection/constructor-injection.iml" filepath="$PROJECT_DIR$/spring-book-ch2/constructor-injection/constructor-injection.iml" group="DI" />
       <module fileurl="file://$PROJECT_DIR$/spring-book-ch2/java-based-autowiring/java-based-autowiring.iml" filepath="$PROJECT_DIR$/spring-book-ch2/java-based-autowiring/java-based-autowiring.iml" group="DI" />
       <module fileurl="file://$PROJECT_DIR$/spring-book-ch2/java-based-configuration/java-based-configuration.iml" filepath="$PROJECT_DIR$/spring-book-ch2/java-based-configuration/java-based-configuration.iml" group="DI" />
       <module fileurl="file://$PROJECT_DIR$/spring-book-ch2/setter-injection/setter-injection.iml" filepath="$PROJECT_DIR$/spring-book-ch2/setter-injection/setter-injection.iml" group="DI" />
+      <module fileurl="file://$PROJECT_DIR$/vario/spittr/spittr.iml" filepath="$PROJECT_DIR$/vario/spittr/spittr.iml" group="Web" />
       <module fileurl="file://$PROJECT_DIR$/vario/upcastDowncastSpike/upcastDowncastSpike.iml" filepath="$PROJECT_DIR$/vario/upcastDowncastSpike/upcastDowncastSpike.iml" group="Vario" />
+      <module fileurl="file://$PROJECT_DIR$/spring-book-ch5/using-persistence-context/using-persistence-context.iml" filepath="$PROJECT_DIR$/spring-book-ch5/using-persistence-context/using-persistence-context.iml" group="JPA" />
+      <module fileurl="file://$PROJECT_DIR$/spring-book-ch5/using-persistence-unit/using-persistence-unit.iml" filepath="$PROJECT_DIR$/spring-book-ch5/using-persistence-unit/using-persistence-unit.iml" group="JPA" />
       <module fileurl="file://$PROJECT_DIR$/spring-book-ch2/xml-based-autowiring/xml-based-autowiring.iml" filepath="$PROJECT_DIR$/spring-book-ch2/xml-based-autowiring/xml-based-autowiring.iml" group="DI" />
       <module fileurl="file://$PROJECT_DIR$/spring-book-ch2/xml-based-configuration/xml-based-configuration.iml" filepath="$PROJECT_DIR$/spring-book-ch2/xml-based-configuration/xml-based-configuration.iml" group="DI" />
     </modules>
