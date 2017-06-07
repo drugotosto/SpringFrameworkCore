@@ -6,8 +6,11 @@ import spittr.model.Spittle;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
 import javax.persistence.TypedQuery;
+
+import org.springframework.data.jpa.repository.Query;
+
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -18,7 +21,7 @@ import java.util.List;
 All public methods of the class become transactional
  */
 @Transactional
-public class JpaSpittleRepository implements SpittleRepository{
+public class SpittleRepositoryImpl implements SpittleRepositoryOther{
 
     /*
     At run time, Spring Container creates an EntityManager bound to the currently
@@ -27,27 +30,20 @@ public class JpaSpittleRepository implements SpittleRepository{
     @PersistenceContext
     private EntityManager em;
 
-    public List<Spittle> findRecentSpittles() {
-       return this.findRecent(10);
+    public List<Spittle> trovaSpittles(long max, int count) {
+        // Utilizzo del linguaggio di interrogazione JPA QL
+        return null;
     }
 
-    public List<Spittle> findRecent(int count) {
+    public List<Spittle> findRecentSpittles(int count) {
         // Utilizzo del linguaggio di interrogazione JPA QL
-        TypedQuery<Spittle> query = em.createQuery("select s from Spittle as  s order by s.time desc",Spittle.class).setFirstResult(0).setMaxResults(count);
+        return null;
+    }
+
+    public List<Spittle> findFirst5ByOrderByTimeDesc() {
+        // Utilizzo del linguaggio di interrogazione JPA QL
+        TypedQuery<Spittle> query = em.createQuery("select s from Spittle as  s order by s.time desc", Spittle.class).setFirstResult(0).setMaxResults(5);
         List<Spittle> results = query.getResultList();
         return results;
-    }
-
-    public List<Spittle> findSpittles(long max, int count) {
-        return null;
-    }
-
-    public Spittle findOne(long id) {
-        return null;
-    }
-
-    public void save(Spittle spittle) {
-        em.persist(spittle);
-        System.out.println("\nSpittle salvato!");
     }
 }

@@ -1,5 +1,8 @@
 package spittr.dao;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import spittr.model.Spittle;
 import java.util.List;
 
@@ -8,28 +11,15 @@ import java.util.List;
  */
 
 /*
-    Interfaccia relativa al repository per accesso ai dati nel DB
+    The key to writing a Spring Data JPA repository is to extend one of a handful of interfaces.
+    You won’t be writing any implementations of SpitterRepository. Instead, you’ll let Spring Data do it for you.
+    It creates an implementation of SpitterRepository, including an implementation of all 18 methods inherited from
+    JpaRepository, PagingAndSortingRepository, and CrudRepository
 */
-public interface SpittleRepository {
+public interface SpittleRepository extends JpaRepository<Spittle,Long>, SpittleRepositoryOther {
 
-    /*Ritorna i 10 Spittles più recenti*/
-    List findRecentSpittles();
+//    public List<Spittle> findFirst5ByOrderByTimeDesc();
 
-    /*Ritorna i primi "count" Spittles più recenti*/
-    List<Spittle> findRecent(int count);
-
-    /*
-        The findSpittles() method takes two parameters. The max parameter is a Spittle
-        ID that represents the maximum ID of any Spittle that should be returned. As for the
-        count parameter, it indicates how many Spittle objects to return.
-        Usato per recuperare "tot" Spittles alla volta paginandoli opportunamente
-    */
-    List<Spittle> findSpittles(long max, int count);
-
-    /*Ritona lo Spittle con il particolare "id"*/
-    Spittle findOne(long id);
-
-    /*Salvataggio dello Spittle sul DB*/
-    void save(Spittle spittle);
+    public Spittle findById(long id);
 
 }

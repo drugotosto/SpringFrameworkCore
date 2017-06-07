@@ -15,10 +15,14 @@ import org.springframework.web.servlet.view.tiles3.TilesConfigurer;
 import org.springframework.web.servlet.view.tiles3.TilesViewResolver;
 
 @Configuration
+/*
+    Enable Spring MVC
+*/
 @EnableWebMvc
-/*      spitter.controller package will be scanned for components.
-        The controllers you write will be annotated with @Controller,
-        which will make them candidates for component-scanning.
+/*
+    spitter.controller package will be scanned for components.
+    The controllers you write will be annotated with @Controller,
+    which will make them candidates for component-scanning.
 */
 @ComponentScan("spittr.controller")
 public class WebConfig  extends WebMvcConfigurerAdapter {

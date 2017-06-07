@@ -10,6 +10,7 @@ import spittr.model.Spittle;
 import spittr.dao.SpittleRepository;
 
 import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Map;
 
@@ -41,9 +42,9 @@ public class SpittleController {
      */
      @RequestMapping(method= RequestMethod.GET)
      public String spittles(Map model) {
-        // In fase di testing stampe in console i 20 spittles più recenti!
+        // In fase di testing stampe in console i 10 spittles più recenti!
         System.out.println("\nTEST relativo al recupero dei 20 spittles più recenti");
-        for (Spittle spit:  (List<Spittle>)spittleRepository.findRecentSpittles()) {
+        for (Spittle spit:  spittleRepository.findFirst5ByOrderByTimeDesc()) {
             System.out.println("\nMessage: \n"+spit.getMessage());
         }
 
@@ -52,7 +53,7 @@ public class SpittleController {
             and given to the view whose name is s   pittles. Given the way you’ve configured
             InternalResourceViewResolver, that view is a JSP at /WEB-INF/views/spittles.jsp.
          */
-        model.put("spittleList",spittleRepository.findRecentSpittles());
+        model.put("spittleList",spittleRepository.findFirst5ByOrderByTimeDesc());
         return "spittles";
     }
 
@@ -81,11 +82,11 @@ public class SpittleController {
     @RequestMapping(method=RequestMethod.GET, params = {"max","count"})
     public String spittles(@RequestParam(value="max", defaultValue=MAX_LONG_AS_STRING) long max, @RequestParam(value="count", defaultValue="20") int count, Map model) {
         System.out.println("\nTEST relativo al recupero dei successi 'count' spittles che seguono quello con ID='max'");
-        for (Spittle spit : (List<Spittle>)spittleRepository.findRecentSpittles()) {
+        for (Spittle spit : (List<Spittle>)spittleRepository.trovaSpittles(max, count)) {
             System.out.println("\nMessage: \n"+spit.getMessage());
         }
 
-        model.put("spittleList",spittleRepository.findSpittles(max, count));
+        model.put("spittleList",spittleRepository.trovaSpittles(max, count));
         return "spittles";
     }
 
@@ -96,7 +97,7 @@ public class SpittleController {
     public String spittle(@PathVariable("spittleId") long spittleId, Map model) {
         System.out.println("\nTEST relativo al recupero di un preciso splittle con dato ID");
 
-        model.put("spittle",spittleRepository.findOne(spittleId));
+        model.put("spittle",spittleRepository.findById(spittleId));
         return "spittle";
     }
 }
