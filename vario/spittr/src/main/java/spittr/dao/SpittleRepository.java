@@ -12,18 +12,24 @@ import java.util.List;
 */
 public interface SpittleRepository {
 
-    /*Ritorna i 20 Spittles più recenti*/
-    List<Spittle> findRecentSpittles();
+    /*Ritorna i 10 Spittles più recenti*/
+    List findRecentSpittles();
+
+    /*Ritorna i primi "count" Spittles più recenti*/
+    List<Spittle> findRecent(int count);
 
     /*
         The findSpittles() method takes two parameters. The max parameter is a Spittle
         ID that represents the maximum ID of any Spittle that should be returned. As for the
-        count parameter, it indicates how many Spittle objects to return
+        count parameter, it indicates how many Spittle objects to return.
+        Usato per recuperare "tot" Spittles alla volta paginandoli opportunamente
     */
     List<Spittle> findSpittles(long max, int count);
 
+    /*Ritona lo Spittle con il particolare "id"*/
     Spittle findOne(long id);
 
-    //void save(Spittle spittle);*/
+    /*Salvataggio dello Spittle sul DB*/
+    void save(Spittle spittle);
 
 }

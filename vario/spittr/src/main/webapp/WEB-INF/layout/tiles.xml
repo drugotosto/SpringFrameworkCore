@@ -33,7 +33,7 @@
     </definition>
 
     <definition name="spittle" extends="base">
-        <put-attribute name="body" value="/WEB-INF/views/spittle.jsp" />
+        <put-attribute name="body" value="/WEB-INF/views/spittles.jsp" />
     </definition>
 
 </tiles-definitions>

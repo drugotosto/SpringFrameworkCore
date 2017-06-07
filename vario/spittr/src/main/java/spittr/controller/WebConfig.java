@@ -45,10 +45,10 @@ public class WebConfig  extends WebMvcConfigurerAdapter {
     }*/
 
     // Tiles
-    @Bean
     /*
     You need a TilesConfigurer bean whose job is to locate and load tile definitions and generally coordinate Tiles
      */
+    @Bean
     public TilesConfigurer tilesConfigurer() {
         TilesConfigurer tiles = new TilesConfigurer();
         /*

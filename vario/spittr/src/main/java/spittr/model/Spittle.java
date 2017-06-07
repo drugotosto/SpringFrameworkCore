@@ -40,11 +40,15 @@ public class Spittle {
     }
 
     public Spittle(String message, Date time, Double longitude, Double latitude) {
-        this.id = null;
+        this(null, message, time, latitude, longitude);
+    }
+
+    public Spittle(Long id, String message, Date time, Double latitude, Double longitude) {
+        this.id = id;
         this.message = message;
         this.time = time;
-        this.longitude = longitude;
         this.latitude = latitude;
+        this.longitude = longitude;
     }
 
     public long getId() {

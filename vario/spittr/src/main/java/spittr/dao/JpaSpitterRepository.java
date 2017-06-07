@@ -13,12 +13,17 @@ import javax.persistence.*;
 @Transactional
 public class JpaSpitterRepository implements SpitterRepository{
 
+    /*
+    EntityManager is called a persistence context because it’s available at run time.
+    The persistence context is the bridge between application and database run times.
+    Using persistence context, you can solely operate on entities, load them, change their states,
+    persist new ones, or delete already loaded ones. It helps you to manage transactions and so on...
+     */
     @PersistenceContext
     private EntityManager em;
 
     public Spitter save(Spitter spitter) {
         em.persist(spitter);
-        em.close();
         System.out.println("\nUtente salvato!");
         return spitter;
     }
