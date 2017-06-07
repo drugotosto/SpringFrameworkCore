@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import org.springframework.web.servlet.ModelAndView;
 import spittr.model.Spitter;
 import spittr.dao.SpitterRepository;
 
@@ -27,8 +28,9 @@ public class SpitterController {
 
 
     @RequestMapping(value="/register", method=RequestMethod.GET)
-    public String showRegistrationForm() {
-        return "registerForm";
+    public ModelAndView showRegistrationForm() {
+        ModelAndView mav = new ModelAndView("registerForm");
+        return mav;
     }
 
     /*
@@ -56,10 +58,11 @@ public class SpitterController {
     * Ha il compito di andare a recuperare dal DB i valori dell'utente richiesto e
     * visualizzare la relativa pagina profilo utente.*/
     @RequestMapping(value="/{username}", method=RequestMethod.GET)
-    public String showSpitterProfile(@PathVariable String username, Map model) {
+    public ModelAndView showSpitterProfile(@PathVariable String username) {
+        ModelAndView mav = new ModelAndView("profile");
         Spitter spitter = spitterRepository.findByUsername(username);
-        model.put("spitter",spitter);
-        return "profile";
+        mav.addObject("spitter",spitter);
+        return mav;
     }
 }
 

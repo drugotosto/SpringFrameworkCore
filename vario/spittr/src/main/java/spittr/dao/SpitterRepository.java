@@ -24,7 +24,6 @@ public interface SpitterRepository extends JpaRepository<Spitter,Long>, SpitterR
     */
     Spitter findByUsername(String username);
 
-
     // Find all Spitters whose email address is a Gmail address
     @Query("select s from Spitter s where s.email like '%gmail.com'")
     List<Spitter> findAllGmailSpitters();

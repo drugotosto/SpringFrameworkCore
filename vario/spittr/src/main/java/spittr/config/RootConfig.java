@@ -17,6 +17,5 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
     scans its base package for any interfaces that extend Spring Data JPA’s Repository interface.
 */
 @EnableJpaRepositories("spittr.dao")
-
 public class RootConfig {
 }

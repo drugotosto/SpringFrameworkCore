@@ -8,9 +8,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 
-import org.springframework.data.jpa.repository.Query;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
