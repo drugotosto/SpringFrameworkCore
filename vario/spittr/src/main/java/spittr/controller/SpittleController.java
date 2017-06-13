@@ -2,26 +2,33 @@ package spittr.controller;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import spittr.model.Spittle;
 import spittr.dao.SpittleRepository;
+import spittr.service.SpittleService;
 
+import java.util.Arrays;
 import java.util.Date;
-import java.util.List;
-import java.util.Map;
 
 /**
  * Created by drugo on 18/05/2017.
  */
 @Controller
 @RequestMapping("/spittles")
-public class SpittleController {
+public class SpittleController{
     private static final String MAX_LONG_AS_STRING = "9223372036854775807";
     static Logger logger = Logger.getLogger(SpittleController.class);
 
     private SpittleRepository spittleRepository;
+
+    @Autowired
+    private SpittleService spittleService;
+
+    @Autowired
+    private ApplicationContext appContext;
 
     @Autowired
     public SpittleController(SpittleRepository spittleRepository) {
@@ -45,6 +52,7 @@ public class SpittleController {
         for (Spittle spit:  spittleRepository.findFirst5ByOrderByTimeDesc()) {
             logger.debug(String.format("Messaggio: %s \n", spit.getMessage()));
         }
+        logger.debug(String.format("BEANS: %s", Arrays.toString(appContext.getBeanDefinitionNames())));
 
         /*
             A list of Spittle objects is stored in the model with a key of spittleList
@@ -52,7 +60,7 @@ public class SpittleController {
             InternalResourceViewResolver, that view is a JSP at /WEB-INF/views/spittles.jsp.
          */
          ModelAndView mav = new ModelAndView("spittles");
-         mav.addObject("spittleList",spittleRepository.findFirst5ByOrderByTimeDesc());
+         mav.addObject("spittleList",spittleService.getRecentSpittles());
          return mav;
     }
 
@@ -104,5 +112,9 @@ public class SpittleController {
         ModelAndView mav = new ModelAndView("spittle");
         mav.addObject("spittle",spittleRepository.findById(spittleId));
         return mav;
+    }
+
+    public void printMessage() {
+        logger.debug("");
     }
 }
