@@ -4,9 +4,9 @@ import com.mysql.jdbc.Connection;
 import org.hibernate.ejb.HibernatePersistence;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.JpaVendorAdapter;
@@ -29,6 +29,10 @@ import java.util.Properties;
  */
 
 @Configuration
+/*
+    scans its base package for any interfaces that extend Spring Data JPA’s Repository interface.
+*/
+@EnableJpaRepositories("spittr.dao")
 /*
 @EnableTansactionManagement makes Spring recognize @Transactional annotations.
 Therefore you put an @Transactional annotation on top of the JpaSpitterRepository, JpaSpittleRepository classes

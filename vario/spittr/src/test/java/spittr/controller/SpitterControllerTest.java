@@ -5,6 +5,8 @@ import spittr.model.Spitter;
 import spittr.dao.SpitterRepository;
 
 import org.springframework.test.web.servlet.MockMvc;
+import spittr.service.SpitterService;
+import spittr.service.SpittleService;
 
 import static org.springframework.test.web.servlet.setup.MockMvcBuilders.standaloneSetup;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
@@ -29,12 +31,12 @@ public class SpitterControllerTest {
     */
     @Test
     public void shouldProcessRegistration() throws Exception {
-        SpitterRepository mockRepository = mock(SpitterRepository.class);
+        SpitterService mockService= mock(SpitterService.class);
         Spitter unsaved = new Spitter("jbauer", "24hours", "Jack", "Bauer");
         Spitter saved = new Spitter(24L, "jbauer", "24hours", "Jack", "Bauer");
-        when(mockRepository.save(unsaved)).thenReturn(saved);
+        when(mockService.saveUser(unsaved)).thenReturn(saved);
 
-        SpitterController controller = new SpitterController(mockRepository);
+        SpitterController controller = new SpitterController(mockService);
         MockMvc mockMvc = standaloneSetup(controller).build();
         mockMvc.perform(post("/spitter/register")
                 .param("firstName", "Jack")
@@ -42,6 +44,6 @@ public class SpitterControllerTest {
                 .param("username", "jbauer")
                 .param("password", "24hours"))
                 .andExpect(redirectedUrl("/spitter/jbauer"));
-        verify(mockRepository, atLeastOnce()).save(unsaved);
+        verify(mockService, atLeastOnce()).saveUser(unsaved);
     }
 }

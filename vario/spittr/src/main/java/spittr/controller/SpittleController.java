@@ -6,12 +6,12 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
-import spittr.model.Spittle;
 import spittr.dao.SpittleRepository;
+import spittr.model.Spittle;
 import spittr.service.SpittleService;
 
 import java.util.Arrays;
-import java.util.Date;
+import java.util.List;
 
 /**
  * Created by drugo on 18/05/2017.
@@ -19,22 +19,16 @@ import java.util.Date;
 @Controller
 @RequestMapping("/spittles")
 public class SpittleController{
+
     private static final String MAX_LONG_AS_STRING = "9223372036854775807";
     static Logger logger = Logger.getLogger(SpittleController.class);
 
-    private SpittleRepository spittleRepository;
-
-    @Autowired
     private SpittleService spittleService;
 
     @Autowired
-    private ApplicationContext appContext;
-
-    @Autowired
-    public SpittleController(SpittleRepository spittleRepository) {
-        this.spittleRepository = spittleRepository;
+    public SpittleController(SpittleService spittleService) {
+        this.spittleService = spittleService;
     }
-
 
     /*
         Gestisce tutte le richieste che arrivano senza parametri
@@ -49,10 +43,10 @@ public class SpittleController{
      @RequestMapping(method= RequestMethod.GET)
      public ModelAndView spittles() {
         logger.debug("Richiesta di visualizzazione degli Spittles!");
-        for (Spittle spit:  spittleRepository.findFirst5ByOrderByTimeDesc()) {
+         List<Spittle> spittles = spittleService.getRecentSpittles();
+        for (Spittle spit:  spittles) {
             logger.debug(String.format("Messaggio: %s \n", spit.getMessage()));
         }
-        logger.debug(String.format("BEANS: %s", Arrays.toString(appContext.getBeanDefinitionNames())));
 
         /*
             A list of Spittle objects is stored in the model with a key of spittleList
@@ -60,7 +54,7 @@ public class SpittleController{
             InternalResourceViewResolver, that view is a JSP at /WEB-INF/views/spittles.jsp.
          */
          ModelAndView mav = new ModelAndView("spittles");
-         mav.addObject("spittleList",spittleService.getRecentSpittles());
+         mav.addObject("spittleList",spittles);
          return mav;
     }
 
@@ -72,9 +66,9 @@ public class SpittleController{
        Da questa istanza di SpittleForm si và a creare e salvare l'oggetto Spittle vero e proprio.
    */
     @RequestMapping(method=RequestMethod.POST)
-    public String processInsertSplittle(SpittleForm form) throws Exception {
+    public String processInsertSplittle(SpittleForm spittleForm) throws Exception {
         logger.debug("Richiesta di inserimento di uno Spittle!");
-        spittleRepository.save(new Spittle(null, form.getMessage(),new Date(), form.getLatitude(), form.getLongitude()));
+        spittleService.saveSpittle(spittleForm);
         return "home";
     }
 
@@ -95,7 +89,7 @@ public class SpittleController{
         logger.debug(String.format("Recupero di un gruppo di %d Spittles che seguono da quello con id %d",count,max));
 
         ModelAndView mav = new ModelAndView("spittles");
-        mav.addObject("spittleList",spittleRepository.trovaSpittles(max, count));
+        mav.addObject("spittleList",spittleService.trovaSpittles(max, count));
         return mav;
     }
 
@@ -110,11 +104,8 @@ public class SpittleController{
         logger.debug(String.format("Recupero del particolare Spittle con id %d",spittleId));
 
         ModelAndView mav = new ModelAndView("spittle");
-        mav.addObject("spittle",spittleRepository.findById(spittleId));
+        mav.addObject("spittle",spittleService.trovaSpittle(spittleId));
         return mav;
     }
 
-    public void printMessage() {
-        logger.debug("");
-    }
 }

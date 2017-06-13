@@ -1,14 +1,13 @@
 package spittr.service;
 
-import org.springframework.stereotype.Service;
+import spittr.model.Spitter;
 
 /**
  * Created by drugo on 13/06/2017.
  */
-@Service
-public class SpitterService implements LoggerAspectInfo {
+public interface SpitterService {
 
-    public void printMessage() {
-    }
+    Spitter saveUser(Spitter spitter);
 
+    Spitter trovaSpitter(String username);
 }

@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import spittr.model.Spitter;
 import spittr.dao.SpitterRepository;
+import spittr.service.SpitterService;
 
 import java.util.Map;
 
@@ -19,13 +20,14 @@ import java.util.Map;
 @Controller
 @RequestMapping("/spitter")
 public class SpitterController {
+
     static Logger logger = Logger.getLogger(SpitterController.class);
 
-    private SpitterRepository spitterRepository;
+    private SpitterService spitterService;
 
     @Autowired
-    public SpitterController(SpitterRepository spitterRepository) {
-        this.spitterRepository = spitterRepository;
+    public SpitterController(SpitterService spitterService) {
+        this.spitterService= spitterService;
     }
 
 
@@ -47,7 +49,7 @@ public class SpitterController {
     @RequestMapping(value="/register", method=RequestMethod.POST)
     public String processRegistration(Spitter spitter) {
         logger.debug(String.format("Salvataggio utente NOME: %s COGNOME: %s" ,spitter.getFirstName(),spitter.getLastName()));
-        spitterRepository.save(spitter);
+        spitterService.saveUser(spitter);
         /*
           When InternalResourceViewResolver sees the redirect: prefix on the view specification,
           it knows to interpret it as a redirect specification instead of as a view name
@@ -65,7 +67,7 @@ public class SpitterController {
         logger.debug(String.format("Visualizzazione pagina dell'utente %s",username));
 
         ModelAndView mav = new ModelAndView("profile");
-        Spitter spitter = spitterRepository.findByUsername(username);
+        Spitter spitter = spitterService.trovaSpitter(username);
         mav.addObject("spitter",spitter);
         return mav;
     }

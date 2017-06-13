@@ -1,8 +1,6 @@
 package spittr.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import spittr.dao.SpittleRepository;
+import spittr.controller.SpittleForm;
 import spittr.model.Spittle;
 
 import java.util.List;
@@ -10,17 +8,13 @@ import java.util.List;
 /**
  * Created by drugo on 13/06/2017.
  */
-@Service
-public class SpittleService implements LoggerAspectInfo {
+public interface SpittleService {
 
-    @Autowired
-    private SpittleRepository spittleRepository;
+    List<Spittle> getRecentSpittles();
 
-    public void printMessage() {
-    }
+    void saveSpittle(SpittleForm spittleForm);
 
-    public List<Spittle> getRecentSpittles(){
-        printMessage();
-        return spittleRepository.findFirst5ByOrderByTimeDesc();
-    }
+    List<Spittle> trovaSpittles(long max, int count);
+
+    Spittle trovaSpittle(long spittleId);
 }
