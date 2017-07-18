@@ -1,7 +1,6 @@
 package spittr.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
-import spittr.controller.WebConfig;
 
 /**
  * Created by drugo on 17/05/2017.
@@ -44,7 +43,7 @@ public class SpitterWebInitializer extends AbstractAnnotationConfigDispatcherSer
     The @Configuration class’s returned getRootConfigClasses() will be used
     to configure the application context created by ContextLoaderListener (server listener).
     ContextLoaderListener is expected to load the other beans in your application.
-    These beans are typically the middle-tier and dao-tier components that drive
+    These beans are typically the middle-tier and repository-tier components that drive
     the back end of the application
 */
     @Override

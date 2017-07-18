@@ -1,4 +1,4 @@
-package spittr.dao;
+package spittr.repository;
 
 import spittr.model.Spittle;
 

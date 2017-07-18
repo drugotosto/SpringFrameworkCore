@@ -2,8 +2,7 @@ package spittr.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import spittr.dao.SpitterRepository;
-import spittr.dao.SpittleRepository;
+import spittr.repository.SpitterRepository;
 import spittr.model.Spitter;
 
 /**

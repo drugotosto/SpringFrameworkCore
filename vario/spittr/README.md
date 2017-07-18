@@ -24,9 +24,16 @@
     <li>
        Utilizzo di Apache Tiles come gestore del layout
     </li>
+    <li>Thymeleaf come template engine (alternativo)</li>
     <li>
         Sviluppo componenti DAO (Repository) per gestione della persistenza dei dati utilizzando DBMS MySql. I componenti @Repository così creati (JdbcSpitterRepository, JdbcSpittleRepository) utilizzano JPA/Hibernate.
     </li>
-    
+    <li>
+        Utilizzo di Spring Security - Autenticazione degli utenti basandosi su credenziali
+        utente memorizzare attraverso uso di un DBMS (MySql). 
+        Utilizzo di "UserDetailsService" per customizzare il servizio.
+    </li>
+    <li>Utilizzo di AOP</li>
+    <li>Utilizzo di Spring Security (Autenticazione/Autorizzazione, CSFR, HTTPS, encryption della pawwsord utente)</li>
 </ul>
 </div>

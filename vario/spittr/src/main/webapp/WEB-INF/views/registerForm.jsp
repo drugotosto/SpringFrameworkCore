@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
+<%@ taglib prefix="sh" uri="http://www.springframework.org/tags/form" %>
 <h1>Register</h1>
 <!--
     Notice that the <form> tag doesn’t have an action parameter set. Because of that,
@@ -15,11 +15,11 @@
     That means you’ll need something back on the server to handle the HTTP POST
     request
 -->
-<form method="POST">
+<sh:form method="POST">
     First Name: <input type="text" name="firstName" /><br/>
     Last Name: <input type="text" name="lastName" /><br/>
     Email: <input type="email" name="email" /><br/>
     Username: <input type="text" name="username" /><br/>
     Password: <input type="password" name="password" /><br/>
     <input type="submit" value="Register" />
-</form>
+</sh:form>

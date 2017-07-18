@@ -46,7 +46,7 @@
       <module name="lifecycle-callback-methods" target="1.8" />
       <module name="provaDowncastUpcast" target="1.8" />
       <module name="setter-injection" target="1.7" />
-      <module name="spittr" target="1.5" />
+      <module name="spittr" target="1.6" />
       <module name="spring-book-ch2" target="1.8" />
       <module name="UpcastDowncastSpike" target="1.5" />
       <module name="upcastDowncastSpike" target="1.5" />

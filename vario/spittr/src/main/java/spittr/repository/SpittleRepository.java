@@ -1,8 +1,7 @@
-package spittr.dao;
+package spittr.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import spittr.model.Spittle;
-import java.util.List;
 
 /**
  * Created by drugo on 18/05/2017.
@@ -11,13 +10,15 @@ import java.util.List;
 /*
     The key to writing a Spring Data JPA repository is to extend one of a handful of interfaces.
     You won’t be writing any implementations of SpitterRepository. Instead, you’ll let Spring Data do it for you.
-    It creates an implementation of SpitterRepository, including an implementation of all 18 methods inherited from
-    JpaRepository, PagingAndSortingRepository, and CrudRepository
+    It creates an implementation of SpitterRepository, including an implementation of all 18 methods inherited from:
+    - JpaRepository
+    - PagingAndSortingRepository
+    - CrudRepository
 */
 public interface SpittleRepository extends JpaRepository<Spittle,Long>, SpittleRepositoryOther {
 
 //    public List<Spittle> findFirst5ByOrderByTimeDesc();
 
-    public Spittle findById(long id);
+    Spittle findById(long id);
 
 }

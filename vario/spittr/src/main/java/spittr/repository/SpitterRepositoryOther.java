@@ -1,4 +1,4 @@
-package spittr.dao;
+package spittr.repository;
 
 /**
  * Created by drugo on 07/06/2017.

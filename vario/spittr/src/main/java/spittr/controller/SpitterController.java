@@ -2,6 +2,8 @@ package spittr.controller;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.crypto.password.StandardPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,10 +11,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import org.springframework.web.servlet.ModelAndView;
 import spittr.model.Spitter;
-import spittr.dao.SpitterRepository;
 import spittr.service.SpitterService;
 
-import java.util.Map;
+import javax.xml.bind.DatatypeConverter;
+import java.math.BigInteger;
 
 /**
  * Created by drugo on 19/05/2017.
@@ -24,10 +26,12 @@ public class SpitterController {
     static Logger logger = Logger.getLogger(SpitterController.class);
 
     private SpitterService spitterService;
+    private PasswordEncoder passwordEncoder;
 
     @Autowired
-    public SpitterController(SpitterService spitterService) {
-        this.spitterService= spitterService;
+    public SpitterController(SpitterService spitterService, PasswordEncoder passwordEncoder) {
+        this.spitterService = spitterService;
+        this.passwordEncoder = passwordEncoder;
     }
 
 
@@ -49,6 +53,8 @@ public class SpitterController {
     @RequestMapping(value="/register", method=RequestMethod.POST)
     public String processRegistration(Spitter spitter) {
         logger.debug(String.format("Salvataggio utente NOME: %s COGNOME: %s" ,spitter.getFirstName(),spitter.getLastName()));
+        // Faccio uso del bean "passwordEncoder" per memorizzare nel DB la password scelta dall'utente come DIGEST SHA-256 e successivo confronto poi in fase di logging
+        spitter.setPassword(passwordEncoder.encode(spitter.getPassword()));
         spitterService.saveUser(spitter);
         /*
           When InternalResourceViewResolver sees the redirect: prefix on the view specification,

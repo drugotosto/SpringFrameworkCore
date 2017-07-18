@@ -1,6 +1,6 @@
 package spittr.service;
 
-import spittr.controller.SpittleForm;
+import spittr.model.SpittleForm;
 import spittr.model.Spittle;
 
 import java.util.List;

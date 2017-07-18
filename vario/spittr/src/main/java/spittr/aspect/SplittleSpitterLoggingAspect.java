@@ -19,7 +19,8 @@ public class SplittleSpitterLoggingAspect {
     * Pointcut che attraverso l'uso della tale espressione permette di definire su quali metodi azionare/agganciare
       i dati Advice descritti del seguito. In questo caso si è deciso di farlo per tutti!
     * N.B: I JointPoints a cui si fa riferimento devono essere sempre associati ad una interfaccia. In questo caso
-    * tale interfaccia risulta essere "SpittleService"*/
+    * tale interfaccia risulta essere "SpittleService"
+    * */
     @Pointcut("execution(* spittr.service.SpittleService.*(..))")
     public void allMethodsLoggerSpittleService(){}
 

@@ -2,15 +2,13 @@ package spittr.controller;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
-import spittr.dao.SpittleRepository;
 import spittr.model.Spittle;
+import spittr.model.SpittleForm;
 import spittr.service.SpittleService;
 
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -43,7 +41,7 @@ public class SpittleController{
      @RequestMapping(method= RequestMethod.GET)
      public ModelAndView spittles() {
         logger.debug("Richiesta di visualizzazione degli Spittles!");
-         List<Spittle> spittles = spittleService.getRecentSpittles();
+        List<Spittle> spittles = spittleService.getRecentSpittles();
         for (Spittle spit:  spittles) {
             logger.debug(String.format("Messaggio: %s \n", spit.getMessage()));
         }

@@ -16,7 +16,7 @@ import java.util.Date;
  */
 
 /*
-    Spittle is a basic POJO dao object—nothing complicated. The only thing to note
+    Spittle is a basic POJO repository object—nothing complicated. The only thing to note
     is that you’re using Apache Commons Lang for easy implementation of the equals() and hashCode() methods.
     They’ll be valuable in writing a test for the controller handler method.
  */

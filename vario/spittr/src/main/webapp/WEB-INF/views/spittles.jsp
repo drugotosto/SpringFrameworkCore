@@ -7,20 +7,22 @@
 --%>
 
 <!--
-    Now that there’s dao in the model, how does the JSP access it? As it turns out,
-    when the view is a JSP, the model dao is copied into the request as request attributes.
+    Now that there’s repository in the model, how does the JSP access it? As it turns out,
+    when the view is a JSP, the model repository is copied into the request as request attributes.
     Therefore, the spittles.jsp file can use JavaServer Pages Standard Tag Library’s (JSTL)
     "c:forEach" tag to render the list of spittles.
 -->
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="sh" uri="http://www.springframework.org/tags/form" %>
 <div class="spittleForm">
     <h1>Spit it out...</h1>
-    <form method="POST" name="spittleForm">
+    <!-- If you’re using Spring’s form-binding tag library, the /<sf:form/> tag will automatically add the hidden CSRF token tag for you (Spring Security)-->
+    <sh:form method="POST" name="spittleForm">
         <input type="hidden" name="latitude">
         <input type="hidden" name="longitude">
         <textarea name="message" cols="80" rows="5"></textarea><br/>
         <input type="submit" value="Add" />
-    </form>
+    </sh:form>
 </div>
 <div class="listTitle">
     <h1>Recent Spittles</h1>

@@ -1,4 +1,4 @@
-package spittr.controller;
+package spittr.model;
 
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;

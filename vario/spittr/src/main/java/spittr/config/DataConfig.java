@@ -1,6 +1,5 @@
 package spittr.config;
 
-import com.mysql.jdbc.Connection;
 import org.hibernate.ejb.HibernatePersistence;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -9,20 +8,14 @@ import org.springframework.dao.annotation.PersistenceExceptionTranslationPostPro
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaTransactionManager;
-import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
-import org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor;
-import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
-import java.sql.DriverManager;
-import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Properties;
 
 /**
  * Created by drugo on 29/05/2017.
@@ -32,7 +25,7 @@ import java.util.Properties;
 /*
     scans its base package for any interfaces that extend Spring Data JPA’s Repository interface.
 */
-@EnableJpaRepositories("spittr.dao")
+@EnableJpaRepositories("spittr.repository")
 /*
 @EnableTansactionManagement makes Spring recognize @Transactional annotations.
 Therefore you put an @Transactional annotation on top of the JpaSpitterRepository, JpaSpittleRepository classes
@@ -68,7 +61,7 @@ public class DataConfig {
     LocalContainerEntityManagerFactoryBean is the most powerful and flexible JPA configuration
     approach Spring offers. It gives full control over EntityManagerFactory configuration.
     It enables you to work with a Spring‐managed DataSource, lets you selectively load
-    entity classesin your project’s classpath, and so on.
+    entity classes in your project’s classpath, and so on.
     */
     @Bean
     @Autowired

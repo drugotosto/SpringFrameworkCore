@@ -2,8 +2,8 @@ package spittr.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import spittr.controller.SpittleForm;
-import spittr.dao.SpittleRepository;
+import spittr.model.SpittleForm;
+import spittr.repository.SpittleRepository;
 import spittr.model.Spittle;
 
 import java.util.Date;

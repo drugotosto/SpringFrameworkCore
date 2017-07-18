@@ -1,7 +1,7 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="s" %>
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="t" %>
 <%@ page session="false" %>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
     <head>
         <title>Spittr</title>
         <link rel="stylesheet" type="text/css" href="<s:url value="/resources/style.css" />" >
